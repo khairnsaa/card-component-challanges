@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 90%;
+  border-radius: 10px;
+  margin: 1rem auto;
+  background-color: hsl(244, 38%, 16%);
+}
+
+.hero_image {
+  width: 100%;
+  height: 40vh;
+  background-color: aliceblue;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  filter: sepia(100%) hue-rotate(290deg);
+}
+
+.content {
+  margin: 2rem 0.9rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.7rem;
+  color: hsl(0, 0%, 100%);
+  margin: 1rem 0;
+}
+
+.title span,
+footer a {
+  color: hsl(277, 64%, 61%);
+}
+
+.subtitle {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.accomplish {
+  padding: 2rem 0;
+}
+
+.companies,
+.templates {
+  margin-bottom: 1.2rem;
+}
+
+.companies h3,
+.templates h3,
+.queries h3 {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.companies p,
+.templates p,
+.queries p {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.12rem;
+  margin: 0.5rem;
+}
+
+footer {
+  font-size: 0.7rem;
+  border-top: 0.1rem solid white;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 1rem;
+  }
+
+  .hero_image {
+    flex: 0.9;
+    background-image: url("./images/image-header-desktop.jpg");
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .content {
+    flex: 1;
+    padding: 0 1.5rem;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    max-width: 90%;
+  }
+
+  .subtitle {
+    width: 80%;
+    margin: 2rem 0;
+    line-height: 1.9rem;
+    font-size: 1.1rem;
+  }
+
+  .accomplish {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .companies p,
+  .templates p,
+  .queries p {
+    margin: 0.3rem 0;
+  }
+
+  .companies {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .templates {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
